@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #202638;
+    display: flex;
+}
+
+.sidebar {
+    width: 230px;
+    background: #182235;
+    color: white;
+    min-height: 100vh;
+    padding: 25px 15px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.sidebar nav a:hover {
+    background: #34445e;
+}
+
+button {
+    background: #315fbd;
+    color: white;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.theme-btn {
+    margin-top: 25px;
+}
+
+#themeBtn {
+    margin-top: 30px;
+}
+
+.main {
+    margin-left: 230px;
+    padding: 30px;
+    width: calc(100% - 230px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    background: #dce8ff;
+    color: #244b92;
+    padding: 15px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card, .panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px #0000000a;
+}
+
+.card h2 {
+    font-size: 28px;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin: 5px;
+    max-width: 100%;
+}
+
+#uploadForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.notice {
+    color: #946b22;
+    background: #fff8e8;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 7px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.doc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.doc-row small {
+    color: gray;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.empty {
+    color: gray;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: gray;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #111827;
+    color: white;
+}
+
+body.dark .card,
+body.dark .panel {
+    background: #1d293b;
+}
+
+body.dark input,
+body.dark select {
+    background: #263449;
+    color: white;
+}
+
+/* Responsive Design */
+
+@media(max-width: 750px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    #uploadForm,
+    .toolbar {
+        flex-direction: column;
+    }
+
+    input, select {
+        width: 100%;
+    }
+}
